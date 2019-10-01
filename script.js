@@ -25,6 +25,8 @@ window.onclick = function (event) {
 let modalTwo = document.getElementById("second-modal");
 let buttonTwo = document.getElementById("second-button");
 let spanTwo = document.getElementById("close2");
+let pageOneBackground = document.getElementById("background")
+let pageTwoBackground = document.getElementById("second-background")
 buttonTwo.onclick = function () {
   modalTwo.style.display = "block";
 }
@@ -35,4 +37,14 @@ window.onclick = function (event) {
   if (event.target === modalTwo) {
     modalTwo.style.display = "none";
   }
+}
+document.getElementById("bring-second-page").onclick = function (event) {
+  pageOneBackground.style.display = "none";
+  pageTwoBackground.style.display = "block";
+}
+
+
+let chuckScore = document.getElementById("score");
+PlayChuckWood = () => {
+
 }
