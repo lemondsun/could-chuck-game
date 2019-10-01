@@ -1,5 +1,7 @@
-
+const chuckedSection = document.getElementById("chucked-up-section")
 let joke = document.getElementById("joke")
+let chuckTruths = document.getElementsByClassName("chuck-truths")
+
 window.onload = async function() {
   // let city = cityInput.value;
   let response = await axios.get("http://api.icndb.com/jokes/random");
@@ -38,13 +40,27 @@ window.onclick = function (event) {
     modalTwo.style.display = "none";
   }
 }
-document.getElementById("bring-second-page").onclick = function (event) {
+document.getElementById('bring-second-page').onclick = function (event) {
   pageOneBackground.style.display = "none";
   pageTwoBackground.style.display = "block";
-}
+  if (pageTwoBackground.style.display = "block") {
+    pageTwoBackground.appendChild(chuckedSection)
+  }
+};
+document.getElementById('bring-second-page2').onclick = function (event) {
+  pageOneBackground.style.display = "none";
+  pageTwoBackground.style.display = "block";
+  if (pageTwoBackground.style.display = "block") {
+    pageTwoBackground.appendChild(chuckedSection)
+  }
+};
 
+// logic for qoutes
+let trueQuotes = [`The epic fight scene between Norris and Bruce Lee in Way of the Dragon? Yeah, it wasn’t choreographed.`, `his name is actually Carlos. Carlos Ray Norris`, `Norris was born in Ryan, Oklahoma`, `he hasn’t lost an official fight for more than half a century.`, `Bruce Lee, at whose funeral Chuck was one of the pallbearers, together with McQueen.`, `Translated as “The Universal Way”, Chun Kuk Do is a hybrid Korean martial art style patented by none other than Chuck Norris himself`]
+let trueChoice = trueQuotes[Math.floor(Math.random() * trueQuotes.length)];
 
-let chuckScore = document.getElementById("score");
-PlayChuckWood = () => {
+chuckTruths.innerHTML = `<p>${trueChoice}</P>`
+// let chuckScore = document.getElementById("score");
+// PlayChuckWood = () => {
 
-}
+// }
