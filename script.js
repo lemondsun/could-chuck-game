@@ -3,7 +3,6 @@ let joke = document.getElementById("joke");
 let chuckChoice = document.querySelector(".chuck-choice");
 let chuckChoiceTwo = document.querySelector(".chuck-choice2");
 window.onload = async function() {
-  
   let response = await axios.get("http://api.icndb.com/jokes/random");
 
   joke.innerHTML = `<h3>${response.data.value.joke}</h3>`;
@@ -23,22 +22,22 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 };
-let modalTwo = document.getElementById("second-modal");
-let buttonTwo = document.getElementById("second-button");
-let spanTwo = document.getElementById("close2");
+// let modalTwo = document.getElementById("second-modal");
+// let buttonTwo = document.getElementById("second-button");
+// let spanTwo = document.getElementById("close2");
 let pageOneBackground = document.getElementById("background");
 let pageTwoBackground = document.getElementById("second-background");
-buttonTwo.onclick = function() {
-  modalTwo.style.display = "block";
-};
-spanTwo.onclick = function() {
-  modalTwo.style.display = "none";
-};
-window.onclick = function(event) {
-  if (event.target === modalTwo) {
-    modalTwo.style.display = "none";
-  }
-};
+// buttonTwo.onclick = function() {
+//   modalTwo.style.display = "block";
+// };
+// spanTwo.onclick = function() {
+//   modalTwo.style.display = "none";
+// };
+// window.onclick = function(event) {
+//   if (event.target === modalTwo) {
+//     modalTwo.style.display = "none";
+//   }
+// };
 document.getElementById("bring-second-page").onclick = function(event) {
   pageOneBackground.style.display = "none";
   pageTwoBackground.style.display = "block";
@@ -46,13 +45,13 @@ document.getElementById("bring-second-page").onclick = function(event) {
     pageTwoBackground.appendChild(chuckedSection);
   }
 };
-document.getElementById("bring-second-page2").onclick = function(event) {
-  pageOneBackground.style.display = "none";
-  pageTwoBackground.style.display = "block";
-  if ((pageTwoBackground.style.display = "block")) {
-    pageTwoBackground.appendChild(chuckedSection);
-  }
-};
+// document.getElementById("bring-second-page2").onclick = function(event) {
+//   pageOneBackground.style.display = "none";
+//   pageTwoBackground.style.display = "block";
+//   if ((pageTwoBackground.style.display = "block")) {
+//     pageTwoBackground.appendChild(chuckedSection);
+//   }
+// };
 
 // code for qoutes
 let trueQuotes = [
@@ -75,8 +74,8 @@ let falseChoice = falseQuotes[Math.floor(Math.random() * falseQuotes.length)];
 let allChoices = trueQuotes.concat(falseQuotes);
 let optionLeft = allChoices[Math.floor(Math.random() * allChoices.length)];
 chuckChoice.innerHTML = optionLeft;
-let optionRight = allChoices[Math.floor(Math.random() * allChoices.length)];
-chuckChoiceTwo.innerHTML = optionRight;
+// let optionRight = allChoices[Math.floor(Math.random() * allChoices.length)];
+// chuckChoiceTwo.innerHTML = optionRight;
 
 // code to determine if quotes are true
 let answerForChoiceOne = "";
@@ -86,12 +85,12 @@ if (trueQuotes.includes(optionLeft)) {
   answerForChoiceOne = "wrong";
 }
 
-let answerForChoiceTwo = "";
-if (trueQuotes.includes(optionRight)) {
-  answerForChoiceTwo = "correct";
-} else {
-  answerForChoiceTwo = "wrong";
-}
+// let answerForChoiceTwo = "";
+// if (trueQuotes.includes(optionRight)) {
+//   answerForChoiceTwo = "correct";
+// } else {
+//   answerForChoiceTwo = "wrong";
+// }
 
 let trueButton = document.querySelector("#true-button");
 let falseButton = document.querySelector("#false-button");
@@ -104,24 +103,25 @@ const trueRight = function() {
     youreRightPage.style.display = "block";
   }
 };
-const trueWrong = function () {
-  if (answerForChoiceOne != "correct") {
+const trueWrong = function() {
+  if (answerForChoiceOne !== "correct") {
     pageTwoBackground.style.display = "none";
     youreWrongPage.style.display = "block";
   }
 };
 const falseRight = function() {
-  if (answerForChoiceOne != "correct") {
+  if (answerForChoiceOne !== "correct") {
     pageTwoBackground.style.display = "none";
     youreRightPage.style.display = "block";
-  } 
+  }
 };
-const falseWrong = function () {
+const falseWrong = function() {
   if (answerForChoiceOne === "correct") {
     pageTwoBackground.style.display = "none";
     youreWrongPage.style.display = "block";
   }
 };
+
 trueButton.addEventListener("click", trueRight);
 trueButton.addEventListener("click", trueWrong);
 falseButton.addEventListener("click", falseRight);
@@ -129,11 +129,11 @@ falseButton.addEventListener("click", falseWrong);
 
 // keeping score
 let playerScore = 25;
-if (youreRightPage.style.display = "block") {
-  playerScore += 10
-  console.log(playerScore)
+if (youreRightPage.style.display === "block") {
+  playerScore += 10;
+  console.log(playerScore);
 }
-if (youreWrongPage.style.display = "block") {
-  playerScore -= 5
-  console.log(playerScore)
+if (youreWrongPage.style.display === "block") {
+  playerScore -= 5;
+  console.log(playerScore);
 }
