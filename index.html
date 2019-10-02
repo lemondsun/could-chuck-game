@@ -1,100 +1,61 @@
 <!DOCTYPE html>
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Could Chuck</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script defer src="script.js" ></script>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  </head>
-  <body id="body">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Could Chuck</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script defer src="script.js" ></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 class="chuck-title">Get Chucked</h1>
+    <button id="joke">Cuckizms</buttonv>
+    </header>
+    
     <div id="background">
-      <h1 class="chuck-title">Could Chuck?</h1>
-      <div id="joke"></div>
-      <div class="text-bubbles">
-      <div id="option1">
-        <!-- trigger modal -->
-        <button id="first-button">Chuck option</button>
-          <!-- the modal -->
-        <div id="first-modal">
-        <!-- modal content -->
-        <div id="modal-1-content">
-          <span id="close"> x</span>
-          <div class="chuck-choice"></div>
-          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam laboriosam ea corporis repellat. Corrupti molestiae earum doloribus, neque assumenda voluptas. Sed nulla natus cumque facilis, provident repellendus temporibus et porro!</p> -->
-          <!-- button to link second page -->
-          <button><a id="bring-second-page"href="#second-page">This quote</a></button>
-        </div>
-        </div>
+      <!-- <button class="my-button">kahil button</button> -->
       
-      </div>
-      <div id="chucked-up-section">
+      <div class="video">
+          <div class="video-responsive">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/jl8JKOwvxwI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div id="movie-display"></div>
+        </div>
+      <!-- <div class="text-bubbles">
+        <!-- <div id="option1"> -->
+          <!-- trigger modal -->
+          <!-- <button id="first-button">Chuck Questions</button> -->
+          <!-- the modal -->
+          <!-- <div id="first-modal"> -->
+            <!-- modal content -->
+            <!-- <div id="modal-1-content"> -->
+              <!-- <span id="close"> x</span> -->
+              <!-- <div class="chuck-choice"></div> -->
+              <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam laboriosam ea corporis repellat. Corrupti molestiae earum doloribus, neque assumenda voluptas. Sed nulla natus cumque facilis, provident repellendus temporibus et porro!</p> -->
+              <!-- button to link second page -->
+              <!-- <button><a id="bring-second-page"href="#second-page">This quote</a></button> -->
+            </div>
+         
+          
+        </div>
+        <!-- <div id="chucked-up-section">
           <img id="chucked-up-img" src="https://i.imgur.com/KFixmQ6t.jpg" alt="quizical Chuck Norris">
           <h2 id="cucked-up-line">Chucked Up...</h2>
-          <h2 id="score">25</h2>
-        </div>
-      <!-- <div id="option2">
-        <button id="second-button">Chuck option</button>
-        <div id="second-modal">
-          <div id="modal-2-content">
-            <span id="close2">x</span>
-            <div class="chuck-choice2"></div>
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p> -->
-            <!-- button to link second page -->
-            <!-- <button> <a id="bring-second-page2"href="#second-page">This quote</a></button> -->
-            
-        </div>
-        </div>
-      </div>
-      </div>
-      
-    </div>
-    <!-- The second page starts here -->
-    <div id="second-page">
-      <div id="second-background">
-        <h1 class="chuck-title">Would Chuck?</h1>
-        <div class="text-bubbles">
-            <div id="second-pg-option1">
-                <!-- trigger modal -->
-                <!-- <button id="second-pg-first-button">Chuck option</button> -->
-                  <!-- the modal -->
-                <div id="second-pg-first-modal">
-                <!-- modal content -->
-                <div id="second-pg-modal-1-content">
-                  <span id="second-pg-close1"> x</span>
-                  <button id="true-button"><p>TRUE</p></button>
-                </div>
-                </div>
-              
-              </div>
-              <div id="second-pg-option2">
-                  <!-- <button id="second-pg-second-button">Chuck option</button> -->
-                  <div id="second-pg-second-modal">
-                    <div id="second-pg-modal-2-content">
-                      <span id="second-pg-close2">x</span>
-                      <button id="false-button"><p>FALSE</p></button>
-                     </div>
-                  </div>
-                </div>
-
-        </div>
-      </div>
-      
-
-      </div>
-      <div id="youre-right-page">
-        <img src="https://i.imgur.com/NuQ1NMD.jpg" alt="pleased chuck norris">
-      </div>
-      <div id="youre-wrong-page">
-        <img src="https://i.imgur.com/7ACk444.jpg" alt="mad chuck norris">
+          <h2 id="score"></h2>
+        </div> -->
+        
       </div>
     </div>
-    
-    
-  </body>
+  </div>
+  
+</div>
+  
+
+</body>
 </html>
