@@ -5,6 +5,10 @@ header {
   background-color: #19181A;
   width: 100%;
   margin: 0;
+  border-bottom: ridge;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #background {
   width: 100%;
@@ -18,6 +22,8 @@ header {
   
 }
 .chuck-title {
+  text-align: center;
+  margin:0;
   color: #B19F9E;
   font-size: 50px;
   position: relative;
@@ -32,6 +38,7 @@ header {
   animation: animate 3s linear infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  
 }
 @keyframes animate {
   0% {
@@ -46,9 +53,15 @@ header {
   color: #479761;
 } */
 .video {
-  background-color: #cebc81;
+  background-color: #9e5a63;
   width: fit-content;
   height: 700px;
+}
+#movie-display {
+  background-color: #97aabd;
+  width: 400px;
+  height: 400px;
+  overflow: scroll; 
 }
 #joke {
   font-family: 'Roboto', sans-serif;
