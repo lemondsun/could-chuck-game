@@ -1,19 +1,26 @@
 body{
   margin:0;
 }
+
 header {
-  background-color: #19181A;
+  background-color: #314455;
+  background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
   width: 100%;
   margin: 0;
   border-bottom: ridge;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  /* justify-content: center; */
 }
 #background {
+  padding-top: 40px;
   width: 100%;
-  height: 100%vh;
-  background-color: #19181A;
+  height: 100vh;
+  background-color: #19181a;
+background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   margin: 0;
   /* border-radius: 10px; */
   text-align: center;
@@ -48,27 +55,33 @@ header {
     background-position: 500%;
   }
 }
-/* #joke {
-  font-family: 'Roboto', sans-serif;
-  color: #479761;
-} */
+
 .video {
-  background-color: #9e5a63;
+  /* background-color: #9e5a63; */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#9e5a63+81,000000+100&1+43,1+51,1+51,0+100 */
+background: -moz-linear-gradient(top,  rgba(158,90,99,1) 43%, rgba(158,90,99,1) 51%, rgba(158,90,99,0.39) 81%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(158,90,99,1) 43%,rgba(158,90,99,1) 51%,rgba(158,90,99,0.39) 81%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(158,90,99,1) 43%,rgba(158,90,99,1) 51%,rgba(158,90,99,0.39) 81%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9e5a63', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+
   width: fit-content;
   height: 700px;
+  margin:auto;
 }
 #movie-display {
-  background-color: #97aabd;
+  background-color: #314455;
   width: 400px;
   height: 400px;
   overflow: scroll; 
+  margin: auto;
 }
 #joke {
+  width: fit-content;
   font-family: 'Roboto', sans-serif;
   color: #fff !important;
 text-transform: uppercase;
 text-decoration: none;
-background: #ed3330;
+background: #644e5b;
 padding: 20px;
 border-radius: 5px;
 display: inline-block;
@@ -76,10 +89,53 @@ border: none;
 transition: all 0.4s ease 0s;
 }
 #joke:hover {
-  background: #434343;
+  background: #c96567;
   letter-spacing: 1px;
   -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
   -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
   box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
   transition: all 0.4s ease 0s;
+  }
+  h1{
+    background-color: #9e5a63;
+    color: #97aabd;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: .1em;
+      text-shadow: 
+        0 -1px 0 #fff, 
+        0 1px 0 #2e2e2e, 
+        0 2px 0 #2c2c2c, 
+        0 3px 0 #2a2a2a, 
+        0 4px 0 #282828, 
+        0 5px 0 #262626, 
+        0 6px 0 #242424, 
+        0 7px 0 #222, 
+        0 8px 0 #202020, 
+        0 9px 0 #1e1e1e, 
+        0 10px 0 #1c1c1c, 
+        0 11px 0 #1a1a1a, 
+        0 12px 0 #181818, 
+        0 13px 0 #161616, 
+        0 14px 0 #141414, 
+        0 15px 0 #121212, 
+        0 22px 30px rgba(0, 0, 0, 0.9);
+  }
+  @media screen and (max-width: 375px){
+    background {
+      width: auto;
+    }
+    .video {
+      width: 300px;
+    }
+    iframe {
+      width: 300px;
+    }
+    #movie-display {
+      width:250px;
+    }
+    img {
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
   }
