@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 body{
   margin:0;
 }
@@ -65,13 +66,13 @@ background: linear-gradient(to bottom,  rgba(158,90,99,1) 43%,rgba(158,90,99,1) 
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9e5a63', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 
   width: fit-content;
-  height: 700px;
+  height: 635px;
   margin:auto;
 }
 #movie-display {
   background-color: #314455;
   width: 400px;
-  height: 400px;
+  height: 315px;
   overflow: scroll; 
   margin: auto;
 }
@@ -120,9 +121,72 @@ transition: all 0.4s ease 0s;
         0 15px 0 #121212, 
         0 22px 30px rgba(0, 0, 0, 0.9);
   }
+  Button {
+    box-shadow: 0px 10px 14px -7px #276873;
+    background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+    background-color:#599bb3;
+    border-radius:8px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:20px;
+    font-weight:bold;
+    padding:13px 32px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #3d768a;
+  }
+  Button:hover {
+    background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+    background-color:#408c99;
+  }
+ Button:active {
+    position:relative;
+    top:1px;
+  }
+  #greatest-kicks{
+    color: #97aabd;
+    text-shadow: 2px 2px #314455;
+    display: inline;
+    /* width: 30px;
+  height: 15px; */
+  /* background-color: red; */
+  position: relative;
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  }
+  @-webkit-keyframes example {
+    0%   {background-color:#314455; left:0px; top:0px;}
+    25%  {background-color:#644e5b; left:200px; top:0px;}
+    50%  {background-color:#9e5a63; left:200px; top:200px;}
+    75%  {background-color:#c96567; left:0px; top:200px;}
+    100% {background-color:#97aabd; left:0px; top:0px;}
+  }
+  @keyframes example {
+    0%   {background-color:#314455; left:0px; top:0px;}
+    25%  {background-color:#644e5b; left:200px; top:0px;}
+    50%  {background-color:#9e5a63; left:200px; top:200px;}
+    75%  {background-color:#c96567; left:0px; top:200px;}
+    100% {background-color:#97aabd; left:0px; top:0px;}
+    
+  }
   @media screen and (max-width: 375px){
-    background {
+    button {
+      background-color: #9e5a63;
+      display: inline;
+
+    }
+    #greatest-kicks {
+      color: #97aabd;
+    text-shadow: 2px 2px #314455;
+    }
+    #background {
       width: auto;
+      height: 812px;
     }
     .video {
       width: 300px;
@@ -131,6 +195,8 @@ transition: all 0.4s ease 0s;
       width: 300px;
     }
     #movie-display {
+      display: flex;
+      flex-direction: column;
       width:250px;
     }
     img {
